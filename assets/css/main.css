@@ -11,8 +11,10 @@ Version: 1.0.0
   --body: #fff;
   --black: #000;
   --white: #fff;
-  --theme: #F55B1F;
-  --theme2: #F55B1F;
+  /* --theme: #F55B1F;
+  --theme2: #F55B1F; */
+  --theme : #0070ac;
+  --theme2 : #0070ac;
   --header: #121315;
   --text: #666666;
   --border:#D4DCED;
@@ -1574,7 +1576,7 @@ span {
   }
 }
 .achivements-wrapper.style-3 .achivements-content .counter-items-area .counter-content h2 {
-  -webkit-text-stroke: 1px rgb(245, 91, 41);
+  -webkit-text-stroke: 1px rgb(0,112, 172, 1);
   -webkit-text-fill-color: transparent;
   transition: all 0.4s ease-in-out;
   font-size: 48px;
@@ -7038,4 +7040,8 @@ input.main-search-input::placeholder {
 .testimonial-section-3 .array-button .array-next:hover {
   background-color: var(--header);
   color: var(--white);
-}/*# sourceMappingURL=main.css.map */
+}
+.headerlogo {
+  width: 165px;
+}
+
