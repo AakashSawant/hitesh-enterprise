@@ -7044,4 +7044,13 @@ input.main-search-input::placeholder {
 .headerlogo {
   width: 165px;
 }
+.bw-hover img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+  max-height: 65px;
+  object-fit: contain;
+}
 
+.bw-hover:hover img {
+  filter: grayscale(0%);
+}
