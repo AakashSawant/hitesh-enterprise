@@ -1,0 +1,27 @@
+{
+  "products": {
+    "Nylon Yarns": {
+      "Nylon": {
+        "full_name": "Nylon Yarns",
+        "short_description": "Nylon (Polyamide) is a synthetic polymer known for its exceptional strength, elasticity, durability, high abrasion resistance, and quick-drying properties. Common types include Nylon 6 and Nylon 6,6. It can be produced as POY, FDY, DTY, ATY, and staple fiber.",
+        "key_specifications": {
+          "Type": ["Nylon 6", "Nylon 6,6"],
+          "Denier Range": "20D - 1000D",
+          "Filament Count": ["7F", "12F", "24F", "34F", "68F"],
+          "Luster": ["Semi-Dull", "Bright", "Full Dull"],
+          "Color": ["Raw White", "Dope Dyed"],
+          "Tenacity": "High to Very High (4.5 - 8.5 g/den)",
+          "Elongation": "Moderate to High (18% - 45%)",
+          "Abrasion Resistance": "Excellent",
+          "Melting Point": ["Nylon 6 (~220°C)", "Nylon 6,6 (~260°C)"]
+        },
+        "applications": [
+          "Apparel: Hosiery, lingerie, swimwear, activewear, windbreakers, rainwear, linings",
+          "Industrial Uses: Tire cords, ropes, fishing nets and lines, parachutes, conveyor belts, airbags, tents, sleeping bags",
+          "Home Furnishings: Carpets, rugs, upholstery",
+          "Other: Luggage, toothbrushes, sewing threads, sports equipment"
+        ]
+      }
+    }
+  }
+}

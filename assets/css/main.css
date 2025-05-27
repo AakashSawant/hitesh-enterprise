@@ -7045,14 +7045,14 @@ input.main-search-input::placeholder {
   width: 165px;
 }
 .bw-hover img {
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   transition: filter 0.3s ease-in-out;
   max-height: 65px;
   object-fit: contain;
 }
 
 .bw-hover:hover img {
-  filter: grayscale(0%);
+  /* filter: grayscale(0%); */
 }
 
 /* Hide Google top banner */
