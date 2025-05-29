@@ -25,7 +25,7 @@ $(document).ready(function () {
 
         navContainer.empty();
         contentContainer.empty();
-
+        $(".productName").text(category.replace('-',' '))
         productTypes.forEach((typeKey, index) => {
             const typeData = firstProduct[typeKey];
             const isActive = index === 0 ? 'active' : '';

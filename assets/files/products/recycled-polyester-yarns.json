@@ -1,0 +1,28 @@
+{
+  "products": {
+    "Recycled Polyester Yarns": {
+      "Recycled": {
+        "full_name": "Recycled Polyester Yarns",
+        "short_description": "Eco-friendly polyester yarn made from recycled PET plastic, offering durability and sustainability.",
+        "key_specifications": {
+          "Source": "Used PET bottles, films, post-consumer waste",
+          "Recycling Methods": "Mechanical & Chemical",
+          "Yarn Types": ["DTY", "FDY", "POY", "Staple Fiber"],
+          "Eco-friendly": "Reduces landfill & pollution",
+          "Energy Saving": "33-50% less energy than virgin polyester",
+          "Carbon Footprint": "Lower emissions",
+          "Durability": "Matches virgin polyester",
+          "Certifications": ["GRS", "OEKO-TEX 100", "RCS"]
+        },
+        "applications": [
+          "Fashion: T-shirts, jackets, activewear",
+          "Home Textiles: Curtains, bed linen, cushions",
+          "Footwear: Uppers, linings, laces",
+          "Bags & Luggage: Backpacks, sleeves",
+          "Automotive: Seat covers, linings",
+          "Eco Packaging: Labels, ribbons"
+        ]
+      }
+    }
+  }
+}
