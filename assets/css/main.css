@@ -3000,7 +3000,8 @@ span {
   height: 100%;
   content: "";
   z-index: -1;
-  opacity: 0.85;
+  /* opacity: 0.85; */
+  opacity: 0;
   background: var(--header);
 }
 .breadcrumb-wrapper .shape-image {

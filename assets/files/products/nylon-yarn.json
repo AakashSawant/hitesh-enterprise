@@ -5,6 +5,7 @@
         "full_name": "Nylon Yarns",
         "short_description": "Nylon (Polyamide) is a synthetic polymer known for its exceptional strength, elasticity, durability, high abrasion resistance, and quick-drying properties",
         "key_specifications": {
+          "Products": ["FDY", "HOY", "POY", "Mother Yarn", "DTY", "AIR TEX", "MONO", "Draw Wonder Yarn"],
           "Type": ["Nylon 6", "Nylon 66"],
           "Denier Range": "20D - 1000D",
           "Filament Count": ["7F", "12F", "24F", "34F", "68F"],
@@ -20,6 +21,62 @@
           "Industrial Uses: Tire cords, ropes, fishing nets and lines, parachutes, conveyor belts, airbags, tents, sleeping bags",
           "Home Furnishings: Carpets, rugs, upholstery",
           "Other: Luggage, toothbrushes, sewing threads, sports equipment"
+        ]
+      },
+      "Mono Yarn": {
+        "full_name": "Nylon Monofilament Yarn",
+        "short_description": "Nylon Monofilament is a single continuous filament made from Nylon 6 or 66. Known for high strength and a smooth surface, ideal for industrial, textile, and medical applications.",
+        "key_specifications": {
+          "Material": ["Nylon 6", "Nylon 66"],
+          "Diameter Range": "0.06 mm to 2.5 mm (denier varies accordingly)",
+          "Tenacity": "High (6–9 g/denier)",
+          "Elongation": "15% – 35%",
+          "Melting Point": "~215–260°C",
+          "Shrinkage": "Low to medium (varies with heat exposure)",
+          "Color": ["Natural (milky white)", "Black", "Custom Dope Dyed"],
+          "Surface": "Smooth, slightly glossy"
+        },
+        "advantages": [
+          "High tensile strength and durability",
+          "Excellent chemical and abrasion resistance",
+          "Smooth and low-friction surface",
+          "Lightweight with flexibility",
+          "UV stabilized and weather-resistant (if treated)"
+        ],
+        "applications": [
+          "Textiles: Bra straps, transparent elastics, fishing nets",
+          "Automotive: Seat belts, bushings, mesh filters",
+          "Medical: Sutures, surgical mesh, orthodontic wires",
+          "Agriculture: Greenhouse support lines, trellising, fishing lines",
+          "Industrial: Conveyor belts, monofilament screens, brushes",
+          "Consumer Goods: 3D printing filament, zip ties, guitar strings"
+        ]
+      },
+      "Mother Yarn": {
+        "full_name": "Mother Yarn",
+        "short_description": "Mother Yarn is a multi-core filament yarn engineered to split into ultra-fine microfibers, ideal for producing suede-like and high-performance fabrics.",
+        "key_specifications": {
+          "Material": ["Polyester", "Nylon 6"],
+          "Structure": "Islands-in-the-sea, pie wedge, or sheath-core designs",
+          "Denier Range": "75D to 300D (before splitting)",
+          "Filament Count": "16 – 128 splits (can go higher)",
+          "Post-splitting DPF": "Typically 0.1 – 0.5 DPF",
+          "Luster": ["Semi-Dull", "Bright", "Full Dull"],
+          "Color": ["Raw White", "Dope Dyed Colors"]
+        },
+        "advantages": [
+          "Enables microfiber production with ultra-fine texture",
+          "High moisture absorption due to increased surface area",
+          "Excellent dye uptake and color uniformity",
+          "Soft hand feel, suitable for luxury fabrics",
+          "Good durability and abrasion resistance"
+        ],
+        "applications": [
+          "Textiles: Suede-like fabrics, velvet, cleaning cloths",
+          "Home Furnishing: Upholstery, curtains, microfiber towels",
+          "Automotive: Seat covers, headliners, dashboard linings",
+          "Industrial: Filtration fabric, synthetic leather backing",
+          "Fashion: Activewear, innerwear, hosiery, scarves"
         ]
       }
     }
