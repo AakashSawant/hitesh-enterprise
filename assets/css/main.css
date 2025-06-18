@@ -11,8 +11,10 @@ Version: 1.0.0
   --body: #fff;
   --black: #000;
   --white: #fff;
-  --theme: #F55B1F;
-  --theme2: #F55B1F;
+  /* --theme: #F55B1F;
+  --theme2: #F55B1F; */
+  --theme : #0070ac;
+  --theme2 : #0070ac;
   --header: #121315;
   --text: #666666;
   --border:#D4DCED;
@@ -1574,7 +1576,7 @@ span {
   }
 }
 .achivements-wrapper.style-3 .achivements-content .counter-items-area .counter-content h2 {
-  -webkit-text-stroke: 1px rgb(245, 91, 41);
+  -webkit-text-stroke: 1px rgb(0,112, 172, 1);
   -webkit-text-fill-color: transparent;
   transition: all 0.4s ease-in-out;
   font-size: 48px;
@@ -2998,7 +3000,8 @@ span {
   height: 100%;
   content: "";
   z-index: -1;
-  opacity: 0.85;
+  /* opacity: 0.85; */
+  opacity: 0;
   background: var(--header);
 }
 .breadcrumb-wrapper .shape-image {
@@ -7038,4 +7041,71 @@ input.main-search-input::placeholder {
 .testimonial-section-3 .array-button .array-next:hover {
   background-color: var(--header);
   color: var(--white);
-}/*# sourceMappingURL=main.css.map */
+}
+.headerlogo {
+  width: 165px;
+}
+.bw-hover img {
+  /* filter: grayscale(100%); */
+  transition: filter 0.3s ease-in-out;
+  max-height: 65px;
+  object-fit: contain;
+}
+
+.bw-hover:hover img {
+  /* filter: grayscale(0%); */
+}
+
+/* Hide Google top banner */
+/* Hide top banner */
+.skiptranslate {
+    display: none !important;
+}
+
+/* Hide the floating translation popup, spinner, and dropdown */
+.goog-te-gadget,
+.goog-te-combo,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight,
+#google_translate_element {
+    display: none !important;
+}
+
+/* Hide Google Translate "Processing..." overlay/spinner */
+.goog-te-spinner-pos,
+.goog-te-spinner-animation {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+.partner-logo {
+  width: 100%;
+  max-width: 100%;
+  height: 65px;               
+  object-fit: contain;       
+  display: block;
+}
+
+#indiaMap {
+    height: 600px;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    #indiaMap {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    #indiaMap {
+        height: 300px;
+    }
+}

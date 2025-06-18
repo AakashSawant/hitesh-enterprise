@@ -60,13 +60,13 @@ CSS TABLE OF CONTENTS
         });
 
         //>> Sticky Header Js Start <<//
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 250) {
-                $("#header-sticky").addClass("sticky");
-            } else {
-                $("#header-sticky").removeClass("sticky");
-            }
-        });
+        // $(window).scroll(function() {
+        //     if ($(this).scrollTop() > 250) {
+        //         $("#header-sticky").addClass("sticky");
+        //     } else {
+        //         $("#header-sticky").removeClass("sticky");
+        //     }
+        // });
 
         //>> Smooth Wrapper Js Start <<//
         if($('#smooth-wrapper').length && $('#smooth-content').length){
@@ -195,6 +195,8 @@ CSS TABLE OF CONTENTS
 
         //>> Wow Animation Start <<//
         // new WOW().init();
+
+        
 
         //>> Nice Select Start <<//
         $('select').niceSelect();
