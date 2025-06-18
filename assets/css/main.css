@@ -7090,3 +7090,22 @@ input.main-search-input::placeholder {
   object-fit: contain;       
   display: block;
 }
+
+#indiaMap {
+    height: 600px;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    #indiaMap {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    #indiaMap {
+        height: 300px;
+    }
+}

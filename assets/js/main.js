@@ -196,6 +196,8 @@ CSS TABLE OF CONTENTS
         //>> Wow Animation Start <<//
         // new WOW().init();
 
+        
+
         //>> Nice Select Start <<//
         $('select').niceSelect();
 
