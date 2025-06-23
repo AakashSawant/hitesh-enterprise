@@ -12,14 +12,24 @@ $(document).ready(function () {
         return;
     }
 
-    const jsonPath = `assets/files/products/${category}.json`;
+    const jsonPath = `./assets/files/products/${category}.json`;
 
     $.getJSON(jsonPath, function (data) {
         const coverImage = data.cover;
         const productData = data.products;
         const productKeys = Object.keys(productData);
         const firstProduct = productData[productKeys[0]];
-
+        const metaData = data.metatags;
+            if (metaData) {
+                $('head').append(`
+                    <title>${metaData.title}</title>
+                    <meta name="title" content="${metaData.title}">
+                    <meta name="description" content="${metaData.description}">
+                    <meta name="keywords" content="${metaData.keywords}">
+                `);
+            } else {
+                console.warn('No meta data found for category:', category);
+            }
         const productTypes = Object.keys(firstProduct);
         const navContainer = $('.nav.flex-column');
         const contentContainer = $('.tab-content');
