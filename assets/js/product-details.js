@@ -15,6 +15,7 @@ $(document).ready(function () {
     const jsonPath = `assets/files/products/${category}.json`;
 
     $.getJSON(jsonPath, function (data) {
+        const coverImage = data.cover;
         const productData = data.products;
         const productKeys = Object.keys(productData);
         const firstProduct = productData[productKeys[0]];
@@ -25,6 +26,7 @@ $(document).ready(function () {
 
         navContainer.empty();
         contentContainer.empty();
+        $("#details-div-section").css('background-image','url("'+coverImage+'")')
         $(".productName").text(category.replace('-', ' '))
 
         productTypes.forEach((typeKey, index) => {
