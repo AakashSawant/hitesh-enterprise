@@ -19,7 +19,12 @@
     { name: "Tamil Nadu", lat: 11.1271, lon: 78.6569 },
     { name: "Karnataka", lat: 15.3173, lon: 75.7139 },
     { name: "Telangana", lat: 18.1124, lon: 79.0193 },
-    { name: "West Bengal", lat: 22.9868, lon: 87.8550 }
+    { name: "West Bengal", lat: 22.9868, lon: 87.8550 },
+    { name: "Daman", lat: 20.3974, lon: 72.8328 },
+{ name: "Dadra and Nagar Haveli", lat: 20.1809, lon: 73.0169 },
+{ name: "Andhra Pradesh", lat: 15.9129, lon: 79.73999 },
+{ name: "Chandigarh", lat: 30.7333, lon: 76.7794 }
+
   ];
 
   states.forEach(state => {

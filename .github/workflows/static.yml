@@ -1,28 +1,21 @@
-# Simple workflow for deploying static content to GitHub Pages
+# .github/workflows/deploy.yml
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["release"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -31,13 +24,44 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Minifiers
+        run: npm install -g html-minifier-terser clean-css-cli terser
+
+      - name: Minify HTML
+        run: |
+          find . -name "*.html" -exec html-minifier-terser \
+            --collapse-whitespace --remove-comments --remove-optional-tags \
+            --minify-css true --minify-js true -o {} {} \;
+
+      - name: Minify CSS
+        run: |
+          find . -name "*.css" -exec cleancss -o {} {} \;
+
+      - name: Minify JS
+        run: |
+          find . -name "*.js" -exec terser {} -o {} \;
+
+      # Optional: Compress Images (PNG/JPEG)
+      - name: Compress Images
+        run: |
+          sudo apt update && sudo apt install -y pngquant jpegoptim
+          find . -iname "*.png" -exec pngquant --quality=65-80 --ext .png --force {} \;
+          find . -iname "*.jpg" -o -iname "*.jpeg" -exec jpegoptim --max=80 --strip-all {} \;
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: '.'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
