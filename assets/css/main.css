@@ -7155,7 +7155,7 @@ input.main-search-input::placeholder {
 }
 
 .service-box-items:hover .service-content .number {
-  -webkit-text-stroke: 1px rgba(245, 91, 31, 0.5);
+  -webkit-text-stroke: 1px var(--theme)
 }
 
 .service-card-items {
