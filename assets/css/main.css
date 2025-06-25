@@ -183,7 +183,7 @@ h1 {
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 115%;
   font-weight: 800;
 }
@@ -6889,7 +6889,7 @@ input.main-search-input::placeholder {
 }
 
 .section-title h6 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 700;
   font-family: "DM Sans", sans-serif;
   color: var(--theme);
