@@ -7617,7 +7617,7 @@ input.main-search-input::placeholder {
   }
 }
 
-.team-box-items .team-image::before {
+/* .team-box-items .team-image::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -7630,7 +7630,7 @@ input.main-search-input::placeholder {
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease-in-out;
-}
+} */
 
 .team-box-items .team-image img {
   width: 100%;
