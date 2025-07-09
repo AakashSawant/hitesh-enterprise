@@ -126,6 +126,25 @@ CSS TABLE OF CONTENTS
             });
         }
 
+    $('.project-card-items').css('cursor', 'pointer').on('click', function () {
+      const link = $(this).find('h3 a').attr('href');
+      if (link) {
+        window.location.href = link;
+      }
+    });
+
+    $('.service-box-items').css('cursor', 'pointer').on('click', function () {
+      const link = $(this).find('h3 a').attr('href');
+      if (link) {
+        window.location.href = link;
+      }
+    });
+
+    // Prevent double navigation if <a> inside is clicked directly
+    $('.service-box-items a').on('click', function (e) {
+      e.stopPropagation();
+    });
+
         //>> Hero Slider Start <<//
         const sliderActive1 = ".hero-slider-3";
         const sliderInit1 = new Swiper(sliderActive1, {

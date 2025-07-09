@@ -3133,6 +3133,29 @@ span {
   padding: 30px 30px 10px 30px;
 }
 
+.sticky.header-3 .header-main .main-menu ul li a.active {
+  color: var(--theme);
+}
+
+.header-main .main-menu ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--theme2); /* underline color */
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease, bottom 0.3s ease;
+}
+
+.header-main .main-menu ul li a:hover::after {
+  transform: scaleX(1);
+  bottom: 4px; /* creates the 'fade up' effect */
+}
+
+
 .header-main .main-menu ul li .has-homemenu .homemenu-items {
   display: flex;
   align-items: center;
@@ -3281,6 +3304,8 @@ span {
   box-shadow: var(--box-shadow);
   -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  /* background: #E8E5D8;
+  background: radial-gradient(circle, rgba(232, 229, 216, 1) 0%, rgb(125 191 227) 100%); */
 }
 
 .sticky.header-1 {
@@ -8226,10 +8251,6 @@ input.main-search-input::placeholder {
   transition: filter 0.3s ease-in-out;
   max-height: 65px;
   object-fit: contain;
-}
-
-.bw-hover:hover img {
-  /* filter: grayscale(0%); */
 }
 
 /* Hide Google top banner */
