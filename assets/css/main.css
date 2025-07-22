@@ -3307,6 +3307,20 @@ span {
   /* background: #E8E5D8;
   background: radial-gradient(circle, rgba(232, 229, 216, 1) 0%, rgb(125 191 227) 100%); */
 }
+.team-box-items .about-us-team-image img {
+
+  width: 100% !important;
+  height: 320px !important; 
+  object-fit: cover;
+  object-position: top center; 
+}
+
+@media (max-width: 575px) {
+    .team-box-items .team-image img {
+        height: 370px !important; 
+        
+    }
+}
 
 .sticky.header-1 {
   padding: 0 40px;
