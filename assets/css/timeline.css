@@ -1,0 +1,154 @@
+    
+        .history-timeline-section {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+
+        .history-timeline-wrapper {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* The central timeline bar */
+        .history-timeline-wrapper::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--theme);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            z-index: 1;
+        }
+
+        /* Container for each timeline event */
+        .history-timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        /* The icon on the timeline */
+        .history-timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffffff;
+            border: 4px solid var(--theme);
+            top: 50px;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        /* Place items to the left */
+        .history-timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        /* Place items to the right */
+        .history-timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        /* Position the icon for left items */
+        .history-timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+
+        /* Position the icon for right items */
+        .history-timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        /* The content box */
+        .history-content-box {
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .history-content-box .year {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--theme);
+            margin-bottom: 10px;
+        }
+
+        .history-content-box h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0c2c55;
+            margin-bottom: 10px;
+        }
+
+        .history-content-box p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        /* The connecting arrow */
+        .history-content-box::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 40px;
+            width: 0;
+            z-index: 1;
+            border: medium solid white;
+        }
+
+        /* Arrow for left items (points right) */
+        .history-timeline-item:nth-child(odd) .history-content-box::before {
+            right: -15px;
+            border-width: 10px 0 10px 15px;
+            border-color: transparent transparent transparent white;
+        }
+
+        /* Arrow for right items (points left) */
+        .history-timeline-item:nth-child(even) .history-content-box::before {
+            left: -15px;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        
+        /* == Responsive Design for Mobile == */
+        @media screen and (max-width: 768px) {
+            /* Move the timeline to the left */
+            .history-timeline-wrapper::after {
+                left: 20px;
+            }
+
+            /* Make all items full width and align them */
+            .history-timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 15px;
+            }
+            .history-timeline-item:nth-child(even) {
+                left: 0%;
+            }
+
+            /* Position the icon on the left timeline */
+            .history-timeline-item::after,
+            .history-timeline-item:nth-child(odd)::after,
+            .history-timeline-item:nth-child(even)::after {
+                 left: 10px;
+            }
+
+            /* Make all arrows point left */
+            .history-content-box::before,
+            .history-timeline-item:nth-child(odd) .history-content-box::before,
+            .history-timeline-item:nth-child(even) .history-content-box::before {
+                 left: -15px;
+                 right: auto;
+                 border-width: 10px 15px 10px 0;
+                 border-color: transparent white transparent transparent;
+            }
+        }
