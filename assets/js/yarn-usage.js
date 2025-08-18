@@ -15,7 +15,7 @@ $(document).ready(function () {
       });
 
       // Trigger default filter (show all)
-      $('.filter-btn[data-filter="all"]').click();
+      $('.filter-btn[data-filter="yarn"]').click();
     });
 
     // Filter functionality
