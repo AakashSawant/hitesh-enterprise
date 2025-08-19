@@ -20,24 +20,28 @@ $(document).ready(function () {
         const productKeys = Object.keys(productData);
         const firstProduct = productData[productKeys[0]];
         const metaData = data.metatags;
-            if (metaData) {
-                $('head').append(`
-                    <title>${metaData.title}</title>
-                    <meta name="title" content="${metaData.title}">
-                    <meta name="description" content="${metaData.description}">
-                    <meta name="keywords" content="${metaData.keywords}">
-                `);
-            } else {
-                console.warn('No meta data found for category:', category);
-            }
+
+        // Meta tags
+        if (metaData) {
+            $('head').append(`
+                <title>${metaData.title}</title>
+                <meta name="title" content="${metaData.title}">
+                <meta name="description" content="${metaData.description}">
+                <meta name="keywords" content="${metaData.keywords}">
+            `);
+        } else {
+            console.warn('No meta data found for category:', category);
+        }
+
         const productTypes = Object.keys(firstProduct);
         const navContainer = $('.nav.flex-column');
         const contentContainer = $('.tab-content');
 
         navContainer.empty();
         contentContainer.empty();
-        $("#details-div-section").css('background-image','url("'+coverImage+'")')
-        $(".productName").text(category.replace('-', ' '))
+
+        $("#details-div-section").css('background-image', 'url("' + coverImage + '")');
+        $(".productName").text(category.replace('-', ' '));
 
         productTypes.forEach((typeKey, index) => {
             const typeData = firstProduct[typeKey];
@@ -59,60 +63,64 @@ $(document).ready(function () {
                 specList += `<tr><td><strong>${spec}</strong></td><td>${value}</td></tr>`;
             }
 
-            // Applications
-            let applicationsList = '';
-            if (typeData.applications) {
-                applicationsList = typeData.applications.map(app => `<li>${app}</li>`).join('');
+            // Applications (✅ FIXED)
+            let applicationsSection = '';
+            if (typeData.applications && typeData.applications.length > 0) {
+                const applicationsList = typeData.applications.map(app => `<li>${app}</li>`).join('');
+                applicationsSection = `
+                    <h5 class="pb-3">Applications:</h5>
+                    <ul class="bullet-list">${applicationsList}</ul>
+                `;
             }
 
-            // Optional Benefits (for Dope Dyed)
+            // Benefits
             let benefitsSection = '';
-            if (typeData.benefits) {
+            if (typeData.benefits && Object.keys(typeData.benefits).length > 0) {
                 let benefitItems = Object.entries(typeData.benefits).map(([key, val]) => `<li><strong>${key}:</strong> ${val}</li>`).join('');
                 benefitsSection = `
                     <h5 class="pb-2">Benefits:</h5>
-                    <ul>${benefitItems}</ul>
+                    <ul class="bullet-list">${benefitItems}</ul>
                 `;
             }
 
-            // Optional Functional Variants
+            // Functional Variants
             let variantsSection = '';
-            if (typeData.functional_variants) {
+            if (typeData.functional_variants && typeData.functional_variants.length > 0) {
                 const variants = typeData.functional_variants.map(v => `<li>${v}</li>`).join('');
                 variantsSection = `
                     <h5 class="pb-2">Functional Variants:</h5>
-                    <ul>${variants}</ul>
+                    <ul class="bullet-list">${variants}</ul>
                 `;
             }
 
-            // Optional Value Added Services
+            // Value Added Services
             let valueServicesSection = '';
-            if (typeData.value_added_services) {
+            if (typeData.value_added_services && typeData.value_added_services.length > 0) {
                 const services = typeData.value_added_services.map(s => `<li>${s}</li>`).join('');
                 valueServicesSection = `
                     <h5 class="pb-2">Value-Added Services:</h5>
-                    <ul>${services}</ul>
+                    <ul class="bullet-list">${services}</ul>
                 `;
             }
 
-            // Optional Dyeing Infrastructure
+            // Dyeing Infrastructure
             let dyeInfraSection = '';
-            if (typeData.dyeing_infrastructure) {
+            if (typeData.dyeing_infrastructure && typeData.dyeing_infrastructure.Capabilities?.length > 0) {
                 const waterSystem = typeData.dyeing_infrastructure["Water System"];
                 const capabilities = typeData.dyeing_infrastructure.Capabilities.map(c => `<li>${c}</li>`).join('');
                 dyeInfraSection = `
                     <h5 class="pb-2">Dyeing Infrastructure:</h5>
                     <p><strong>Water System:</strong> ${waterSystem}</p>
-                    <ul>${capabilities}</ul>
+                    <ul class="bullet-list">${capabilities}</ul>
                 `;
             }
 
             // Final Tab Content
             const tabContent = `
                 <div class="tab-pane fade show ${isActive}" id="tab${index + 1}" role="tabpanel">
-                    <h4 class="pb-2">${typeData.full_name}</h4>
+                    <h4 class="pb-3">${typeData.full_name}</h4>
                     <p>${typeData.short_description}</p>
-                    <h5 class="pb-2 pt-2">Key Specifications:</h5>
+                    <h5 class="pb-3 pt-3">Key Specifications:</h5>
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped">
                             <tbody>${specList}</tbody>
@@ -122,8 +130,7 @@ $(document).ready(function () {
                     ${variantsSection}
                     ${valueServicesSection}
                     ${dyeInfraSection}
-                    <h5 class="pb-2">Applications:</h5>
-                    <ul>${applicationsList}</ul>
+                    ${applicationsSection}
                 </div>`;
 
             contentContainer.append(tabContent);
