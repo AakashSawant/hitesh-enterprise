@@ -5,7 +5,6 @@ $(document).ready(function () {
         return url.searchParams.get(name);
     }
 
-    // Fetch data based on category
     const category = getParameterByName('category');
     if (!category) {
         $('#tab1').html('<p class="text-danger">No category specified in URL.</p>');
@@ -29,8 +28,6 @@ $(document).ready(function () {
                 <meta name="description" content="${metaData.description}">
                 <meta name="keywords" content="${metaData.keywords}">
             `);
-        } else {
-            console.warn('No meta data found for category:', category);
         }
 
         const productTypes = Object.keys(firstProduct);
@@ -54,7 +51,7 @@ $(document).ready(function () {
                 </button>`;
             navContainer.append(tabButton);
 
-            // Tab Content - Specifications
+            // Key Specifications
             let specList = '';
             for (const spec in typeData.key_specifications) {
                 const value = Array.isArray(typeData.key_specifications[spec])
@@ -63,7 +60,7 @@ $(document).ready(function () {
                 specList += `<tr><td><strong>${spec}</strong></td><td>${value}</td></tr>`;
             }
 
-            // Applications (✅ FIXED)
+            // Applications
             let applicationsSection = '';
             if (typeData.applications && typeData.applications.length > 0) {
                 const applicationsList = typeData.applications.map(app => `<li>${app}</li>`).join('');
@@ -98,7 +95,7 @@ $(document).ready(function () {
             if (typeData.value_added_services && typeData.value_added_services.length > 0) {
                 const services = typeData.value_added_services.map(s => `<li>${s}</li>`).join('');
                 valueServicesSection = `
-                    <h5 class="pb-2">Value-Added Services:</h5>
+                    <h5 class="pb-2">Our USP:</h5>
                     <ul class="bullet-list">${services}</ul>
                 `;
             }
@@ -128,8 +125,8 @@ $(document).ready(function () {
                     </div>
                     ${benefitsSection}
                     ${variantsSection}
-                    ${valueServicesSection}
                     ${dyeInfraSection}
+                    ${valueServicesSection}
                     ${applicationsSection}
                 </div>`;
 
