@@ -2935,7 +2935,8 @@ span {
 .header-3 {
   position: relative;
   z-index: 99;
-  background-color: var(--bg);
+  /* background-color: var(--bg); previous */
+  background-color: transparent;
   padding-top: 5px;
 }
 
