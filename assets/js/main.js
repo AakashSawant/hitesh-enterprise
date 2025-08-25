@@ -63,8 +63,12 @@ CSS TABLE OF CONTENTS
         $(window).scroll(function() {
             if ($(this).scrollTop() > 250) {
                 $("#header-sticky").addClass("sticky");
+                $("#sidebarToggle").removeClass("color-white");
             } else {
                 $("#header-sticky").removeClass("sticky");
+                $("#sidebarToggle").addClass("color-white");
+                
+
             }
         });
 

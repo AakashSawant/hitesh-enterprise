@@ -59,4 +59,7 @@
     background: #eef6fb;
     transform: translateY(-3px)
 }
+.swiper {
+  width: 100% !important;
+}
 
