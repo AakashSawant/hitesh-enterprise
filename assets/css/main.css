@@ -3560,7 +3560,8 @@ span {
 }
 
 .breadcrumb-wrapper .page-heading h1 {
-  color: var(--white);
+  /* color: var(--white); */
+  color: var(--theme2);
   font-size: 74px;
   position: relative;
   z-index: 9;
@@ -8333,4 +8334,8 @@ input.main-search-input::placeholder {
 }
 #sidebarToggle.color-white {
   color: #f2f5fa !important;
+}
+.footer-logo {
+  height: 30px; /* Adjust size */
+  width: auto;
 }
