@@ -63,3 +63,20 @@
   width: 100% !important;
 }
 
+@media (max-width: 991px) { /* For tablets & mobile */
+  .hero-content {
+    position: relative;
+  }
+
+  .hero-button {
+    margin-top: 40px; /* Increase spacing */
+  }
+}
+
+@media (max-width: 767px) { /* For smaller mobile screens */
+  .hero-button {
+    position: absolute;
+    bottom: 80px; /* Keep it at the bottom of hero-content */   
+    
+  }
+}
