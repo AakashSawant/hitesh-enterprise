@@ -4673,11 +4673,10 @@ span {
 
 .hero-3 .swiper-dot-2 {
   position: absolute;
-  right: 70px;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 20px; /* distance from bottom */
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 9;
-  transform: rotate(90deg);
 }
 
 @media (max-width: 1399px) {
