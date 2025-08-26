@@ -80,3 +80,9 @@
     
   }
 }
+/* Extra small (like 416px) */
+@media (max-width: 420px) {
+  .hero-image {
+    height: 100vh; /* Slightly smaller for very small screens */
+  }
+}
