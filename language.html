@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Hitesh Enterprise" />
+    <meta
+      name="description"
+      content="Choose your preferred language to view the entire Hitesh Enterprise website."
+    />
+
+    <!-- Page Title -->
+    <title>Language Selector | Hitesh Enterprise - Translate Website</title>
+
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href="https://www.hiteshenterprise.com/language.html"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Choose Language | Hitesh Enterprise" />
+    <meta
+      property="og:description"
+      content="Translate the entire Hitesh Enterprise website into your preferred language."
+    />
+    <meta
+      property="og:url"
+      content="https://www.hiteshenterprise.com/language.html"
+    />
+    <meta
+      property="og:image"
+      content="https://www.hiteshenterprise.com/assets/img/logo/hitesh-og-image.webp"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Choose Language | Hitesh Enterprise" />
+    <meta
+      name="twitter:description"
+      content="Translate the entire Hitesh Enterprise website into your preferred language."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.hiteshenterprise.com/assets/img/logo/hitesh-og-image.webp"
+    />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      href="./assets/img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/favicon/apple-touch-icon.png"
+    />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/animate.css" />
+    <link rel="stylesheet" href="./assets/css/splitting.css" />
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="./assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/nice-select.css" />
+    <link rel="stylesheet" href="./assets/css/color.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <style>
+      .language-section {
+        padding: 80px 0;
+      }
+      .language-selector select {
+        width: 300px;
+        margin: 0 auto;
+        font-size: 18px;
+        text-align: center;
+      }
+      #google_translate_element {
+        display: none !important; /* Hide Google Toolbar */
+      }
+      body > .skiptranslate {
+        display: none !important; /* Hide banner */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header-sticky" class="header-3">
+      <div class="container-fluid">
+        <div class="mega-menu-wrapper">
+          <div class="header-main">
+            <div class="header-left">
+              <div class="logo">
+                <a href="./index.html" class="header-logo">
+                  <img
+                    src="./assets/img/logo/logo-white.png"
+                    alt="logo-img"
+                    class="headerlogo"
+                  />
+                </a>
+                <a href="./index.html" class="header-logo-2">
+                  <img
+                    src="./assets/img/logo/logo-main.png"
+                    alt="logo-img"
+                    class="headerlogo"
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              class="header-right d-flex justify-content-end align-items-center"
+            >
+              <div class="mean__menu-wrapper">
+                <div class="main-menu">
+                  <nav id="mobile-menu">
+                    <ul>
+                      <li><a href="./index.html">Home</a></li>
+                      <li><a href="./about.html">About Us</a></li>
+                      <li><a href="./our-products.html">Our Products</a></li>
+                      <li><a href="./yarn-uses.html">Yarn Uses</a></li>
+                      <li><a href="./our-partners.html">Our Partners</a></li>
+                      <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="header-button">
+                <a href="./contact.html" class="theme-btn"
+                  >Get a Quote <i class="fa-regular fa-arrow-right"></i
+                ></a>
+              </div>
+              <div class="header__hamburger d-block d-xl-none my-auto">
+                <div class="sidebar__toggle color-white" id="sidebarToggle">
+                  <i class="fas fa-bars"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Language Section -->
+    <section class="language-section text-center">
+      <div class="container">
+        <div class="section-title mb-4">
+          <h1 class="wow fadeInUp" data-wow-delay=".3s">
+            Choose Your Language
+          </h1>
+          <p class="wow fadeInUp" data-wow-delay=".5s">
+            Translate our website into your preferred language.
+          </p>
+        </div>
+        <div class="language-selector">
+          <select id="languageDropdown" class="nice-select"></select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="footer-section style-radius bg-cover"
+      style="background-image: url('./assets/img/footer/bg.jpg')"
+    >
+      <div class="container">
+        <div
+          class="footer-bottom d-flex justify-content-between align-items-center py-2 px-3"
+        >
+          <p id="copyright" class="mb-0 text-center flex-grow-1"></p>
+          <img
+            src="./assets/img/logo/footer-sign.jpeg"
+            alt="Hitesh Enterprise"
+            class="footer-logo ms-3"
+          />
+        </div>
+        <script>
+          document.getElementById("copyright").innerHTML =
+            "&copy; " +
+            new Date().getFullYear() +
+            " by <a href='index.html'>Hitesh Enterprise</a>";
+        </script>
+      </div>
+    </footer>
+
+    <!-- Google Translate -->
+    <div id="google_translate_element"></div>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- JS Files -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script>
+      const googleLanguages = {
+        en: "English",
+        hi: "Hindi",
+        gu: "Gujarati",
+        fr: "French",
+        es: "Spanish",
+        de: "German",
+        "zh-CN": "Chinese (Simplified)",
+        ar: "Arabic",
+        ru: "Russian",
+        ja: "Japanese",
+        ko: "Korean",
+      };
+
+      $(document).ready(function () {
+        const $dropdown = $("#languageDropdown");
+        for (const [code, name] of Object.entries(googleLanguages)) {
+          $dropdown.append(`<option value="${code}">${name}</option>`);
+        }
+        $("select").niceSelect();
+
+        $("#languageDropdown").on("change", function () {
+          const lang = $(this).val();
+          const iframe = document.querySelector("iframe.goog-te-menu-frame");
+          if (iframe) {
+            const innerDoc =
+              iframe.contentDocument || iframe.contentWindow.document;
+            const items = innerDoc.querySelectorAll(
+              ".goog-te-menu2-item span.text"
+            );
+            items.forEach((item) => {
+              if (item.innerText === googleLanguages[lang]) {
+                item.click();
+              }
+            });
+          }
+
+          // Handle data-splitting
+          if (lang === "en") {
+            $("[data-splitting]").attr("data-splitting", "true");
+          } else {
+            $("[data-splitting]").removeAttr("data-splitting");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
