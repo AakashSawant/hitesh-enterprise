@@ -1,0 +1,25 @@
+.partner-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 40px 20px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        transition: all 0.3s ease-in-out;
+        height: 100%; /* ensures equal height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .partner-card:hover {
+        background: var(--theme); /* Bootstrap primary color */
+        color: #fff;
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+      .partner-card > span {
+        text-transform: capitalize;
+      }
